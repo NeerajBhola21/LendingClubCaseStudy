@@ -39,27 +39,6 @@ The loan dataset provided includes 39717 rows and 111 columns.
     purpose: The stated reason for the loan (e.g., debt consolidation, home improvement).
     home_ownership:	The home ownership status provided by the borrower during registration. Our values are: RENT, OWN, MORTGAGE, OTHER.
     
-## Approach
-### Data Cleaning
-- No header, footers, summary or rows numbers were found in the dataset.  
-- no duplicates rows found.
-- 1140 rows present of loan_status=‘current’ which has been deleted as loan_status =‘current’ is not required for analysis. 
-- 55 columns have all the rows values as “null / blank” and doesn’t participate in analyze has been removed.
-- ‘url’ and ‘member_id’ is unique in nature and has been deleted. Have considered ‘id’ for further analysis.  
-- ‘desc’ and ‘title’  contains text/description values and doesn’t participate has been dropped from analysis.
-- Limiting our analysis to ‘Group’ level only hence sub-group has been dropped.
-- Using  domain knowledge, behavioral data is captured and hence will not available during the loan approval and is not considered in  this analysis.
-- 21 behavioral data columns has deleted.
-- 8 columns whose values were 1, since this is a unique value it has been dropped from analysis.  
-- There were two columns which is having more that 50% of data as “NA” has been removed.
-- After completing all the data cleaning process, we are left with 38577 rows and 20 columns for our analysis.
-
-### Exploratory Data Analysis (EDA)
-
-- Univariate Analysis: Studied the distribution of key numerical features such as loan_amnt, annual_inc, and int_rate using histograms and boxplots.
-- Bivariate Analysis: Analyzed the relationship between loan_status and other features like int_rate, annual_inc, and purpose using stacked bar plots and correlation heatmaps.
-- Categorical Feature Analysis: Examined categorical features such as grade, home_ownership, and verification_status to understand their influence on loan defaults.
-
 ## Conclusions
 ### 1. Annual Income -
 It is oserved that the applicants with higher incomce are less likely to be in charge off category. It shows a negative correlation with Chargeoff due to financial stability.
